@@ -56,12 +56,6 @@
     };
 
     macros {
-        mkp_exit_AML: mkp_exit_AML {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none>;
-            label = "MKP_EXIT_AML";
-        };
     };
 
     mkp_exit_AML: mkp_exit_AML {
