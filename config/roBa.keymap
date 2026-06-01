@@ -56,11 +56,11 @@
     };
 
     macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
+        mkp_exit_AML: mkp_exit_AML {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "MKP_EXIT_AML";
         };
     };
 
@@ -133,10 +133,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans    &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp MB4  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp MB5  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                  &trans
+&to_layer_0 Q      &to_layer_0 W         &to_layer_0 E         &to_layer_0 R      &to_layer_0 T                                                    &to_layer_0 Y      &to_layer_0 U  &to_layer_0 I      &to_layer_0 O       &to_layer_0 P
+&to_layer_0 A      &to_layer_0 S         &to_layer_0 D         &to_layer_0 F      &to_layer_0 G      &trans                 &to_layer_0 SEMICOLON  &mkp MB4           &mkp MB1       &mkp MB3           &mkp MB2            &to_layer_0 MINUS
+&to_layer_0 Z      &to_layer_0 X         &to_layer_0 C         &to_layer_0 V      &to_layer_0 B      &to_layer_0 B          &to_layer_0 COLON      &mkp MB5           &to_layer_0 M  &to_layer_0 COMMA  &to_layer_0 PERIOD  &to_layer_0 SLASH
+&to_layer_0 LCTRL  &to_layer_0 LEFT_WIN  &to_layer_0 LEFT_ALT  &to_layer_0 LANG2  &to_layer_0 SPACE  &to_layer_0 LANG1      &to_layer_0 BACKSPACE  &to_layer_0 ENTER                                                        &to_layer_0 ESC
             >;
         };
 
@@ -149,7 +149,7 @@
             >;
         };
 
-        FuncBt {
+        BLUETOOTH {
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                             &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11      &trans       &trans        &trans        &trans        &trans        &trans
