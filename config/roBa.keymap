@@ -82,8 +82,8 @@
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                               &kp T                                                 &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F                               &kp G        &kp LS(LG(S))             &kp SEMICOLON  &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                               &kp B        &lt 6 UNDERSCORE          &kp COLON      &kp N        &kp M  &kp COMMA  &kp DOT  &mt SLASH RIGHT_SHIFT
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT LANG_ZENKAKUHANKAKU  &lt 2 SPACE  &lt_to_layer_0 3 TAB      &kp DEL        &lt 2 ENTER                             &kp ESC
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                               &kp B        &lt 6 B                   &kp COLON      &kp N        &kp M  &kp COMMA  &kp DOT  &mt SLASH RIGHT_SHIFT
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT LANG_ZENKAKUHANKAKU  &lt 2 SPACE  &lt_to_layer_0 3 TAB      &kp BACKSPACE  &lt 2 ENTER                             &kp ESC
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -100,10 +100,10 @@
 
         NUM {
             bindings = <
-&kp ASTERISK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp EQUAL                      &kp HOME       &kp END         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp AT_SIGN
-&kp SLASH     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp MINUS  &trans      &trans  &kp PAGE_UP    &kp AT_SIGN     &kp UP_ARROW      &kp DOLLAR         &kp SEMICOLON
-&kp TILDE     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PLUS   &trans      &trans  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT_ARROW    &kp COLON
-&kp LCTRL     &kp KP_NUMBER_0  &kp DOT          &trans           &trans     &trans      &trans  &trans                                                              &trans
+&kp ASTERISK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp EQUAL                          &kp HOME       &kp END         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp AT_SIGN
+&kp SLASH     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp MINUS  &trans      &trans      &kp PAGE_UP    &kp AT_SIGN     &kp UP_ARROW      &kp DOLLAR         &kp SEMICOLON
+&kp TILDE     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PLUS   &trans      &trans      &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT_ARROW    &kp COLON
+&kp LCTRL     &kp KP_NUMBER_0  &kp DOT          &trans           &trans     &trans      &kp DELETE  &trans                                                              &trans
             >;
         };
 
