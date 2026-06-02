@@ -88,21 +88,6 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
-
-        mkp_exit_AML: mkp_exit_AML {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
-                <&macro_tap>,
-                <&sl 4>;
-
-            label = "MKP_EXIT_AML";
-        };
     };
 
     behaviors {
@@ -132,10 +117,10 @@
 
         NUM {
             bindings = <
-&kp ASTERISK  &kp N7               &kp N8        &kp N9        &kp EQUAL                          &kp HOME       &kp END         &kp JP_LBRACKET  &kp JP_RBRACKET  &kp JP_AT
-&kp SLASH     &kp NUMBER_4         &kp N5        &kp NUMBER_6  &kp MINUS  &trans      &trans      &kp PAGE_UP    &mkp MB1        &kp UP_ARROW     &mkp MB2         &kp SEMICOLON
-&kp TILDE     &kp NUMBER_1         &kp NUMBER_2  &kp NUMBER_3  &kp PLUS   &trans      &trans      &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW   &kp RIGHT_ARROW  &mt JP_COLON
-&kp LCTRL     &kp RC(KP_NUMBER_0)  &kp DOT       &trans        &trans     &trans      &kp DELETE  &kp LS(ENTER)                                                    &trans
+&kp ASTERISK  &kp N7        &kp N8        &kp N9        &kp EQUAL                          &kp HOME       &kp END         &kp JP_LBRACKET  &kp JP_RBRACKET  &kp JP_AT
+&kp SLASH     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS  &trans      &trans      &kp PAGE_UP    &mkp MB1        &kp UP_ARROW     &mkp MB2         &kp SEMICOLON
+&kp TILDE     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS   &trans      &trans      &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW   &kp RIGHT_ARROW  &mt JP_COLON
+&kp LCTRL     &kp N0        &kp DOT       &trans        &trans     &trans      &kp DELETE  &kp LS(ENTER)                                                    &trans
             >;
         };
 
