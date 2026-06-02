@@ -86,16 +86,9 @@
         };
     };
 
+// 1. 先に behaviors を定義（マクロから参照できるようにするため）
     behaviors {
-        lt_to_layer_0: lt_to_layer_0 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
+        // スティッキーキーの定義
         sl_250: sl_250 {
             compatible = "zmk,behavior-sticky-key";
             label = "SL_250";
@@ -104,18 +97,20 @@
             release-after-ms = <250>;
         };
 
-        tog_off: toggle_layer_off {
-            compatible = "zmk,behavior-toggle-layer";
-            #binding-cells = <1>;
-            display-name = "Toggle Layer Off";
-            toggle-mode = "off";
+        // 引数のミスマッチを防ぐため、標準のHold-Tapの構造に合わせた修正
+        // ※キーマップ上では「&lt_to_layer_0 レイヤー番号 キーコード」の形で呼び出します
+        lt_to_layer_0: lt_to_layer_0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_TO_0";
+            bindings = <&mo>, <&to_layer_0>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
         };
 
         lt_exit_AML: lt_exit_AML {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_exit_AML";
             bindings = <&mo_exit_AML>, <&kp_exit_AML>;
-
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
@@ -126,7 +121,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LT_exit_AML_ON_HOLD";
             bindings = <&mo_exit_AML>, <&kp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
@@ -137,7 +131,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "MT_exit_AML";
             bindings = <&mod_exit_AML>, <&kp_exit_AML>;
-
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
@@ -148,7 +141,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "MT_exit_AML_ON_TAP";
             bindings = <&kp>, <&kp_exit_AML>;
-
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
@@ -156,6 +148,7 @@
         };
     };
 
+    // 2. 後から macros を定義（上の behaviors を安全に参照可能）
     macros {
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
@@ -164,12 +157,13 @@
             label = "TO_LAYER_0";
         };
 
+        // 存在しない zmk,behavior-toggle-layer の代わりに 標準の &tog を使用
         exit_AML: exit_AML {
             compatible = "zmk,behavior-macro";
             wait-ms = <0>;
             tap-ms = <0>;
             #binding-cells = <0>;
-            bindings = <&tog_off MOUSE>;
+            bindings = <&tog MOUSE>; 
             label = "exit_AML";
         };
 
@@ -232,7 +226,6 @@
             label = "MKP_EXIT_AML";
         };
     };
-
     keymap {
         compatible = "zmk,keymap";
 
