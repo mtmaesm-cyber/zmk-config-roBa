@@ -117,9 +117,9 @@
 
         FUNCTION {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5                        &kp RC(HOME)       &kp RC(END)         &kp RS(LEFT_PARENTHESIS)  &kp RS(RIGHT_PARENTHESIS)  &kp JP_PIPE
-&kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11      &trans  &kp RC(PAGE_UP)    &kp SINGLE_QUOTE    &kp RA(UP_ARROW)          &kp DOUBLE_QUOTES          &kp LS(MINUS)
-&trans  &trans  &trans  &trans  &trans   &kp F12      &trans  &kp RC(PAGE_DOWN)  &kp RA(LEFT_ARROW)  &kp RA(DOWN_ARROW)        &kp RA(RIGHT_ARROW)        &kp JP_YEN
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5                        &kp RC(HOME)       &kp RC(END)         &kp RS(LEFT_PARENTHESIS)  &kp RS(RIGHT_PARENTHESIS)  &kp PIPE
+&kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11      &trans  &kp RC(PAGE_UP)    &kp COLON           &kp RA(UP_ARROW)          &kp COLON                  &kp LS(MINUS)
+&trans  &trans  &trans  &trans  &trans   &kp F12      &trans  &kp RC(PAGE_DOWN)  &kp RA(LEFT_ARROW)  &kp RA(DOWN_ARROW)        &kp RA(RIGHT_ARROW)        &kp BACKSLASH
 &trans  &trans  &trans  &trans  &trans   &trans       &trans  &trans                                                                                      &trans
             >;
         };
