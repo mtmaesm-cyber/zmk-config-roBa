@@ -86,9 +86,16 @@
         };
     };
 
-// 1. 先に behaviors を定義（マクロから参照できるようにするため）
+    macros {
+        to_layer_0: to_layer_0 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TO_LAYER_0";
+        };
+    };
+
     behaviors {
-        // スティッキーキーの定義
         sl_250: sl_250 {
             compatible = "zmk,behavior-sticky-key";
             label = "SL_250";
@@ -97,8 +104,6 @@
             release-after-ms = <250>;
         };
 
-        // 引数のミスマッチを防ぐため、標準のHold-Tapの構造に合わせた修正
-        // ※キーマップ上では「&lt_to_layer_0 レイヤー番号 キーコード」の形で呼び出します
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
@@ -106,126 +111,8 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
-
-        lt_exit_AML: lt_exit_AML {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_exit_AML";
-            bindings = <&mo_exit_AML>, <&kp_exit_AML>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
-        };
-
-        lt_exit_AML_on_hold: lt_exit_AML_on_hold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_exit_AML_ON_HOLD";
-            bindings = <&mo_exit_AML>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
-        };
-
-        mt_exit_AML: mt_exit_AML {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_exit_AML";
-            bindings = <&mod_exit_AML>, <&kp_exit_AML>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-            quick-tap-ms = <200>;
-        };
-
-        mt_exit_AML_on_tap: mt_exit_AML_on_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_exit_AML_ON_TAP";
-            bindings = <&kp>, <&kp_exit_AML>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-            quick-tap-ms = <200>;
-        };
     };
 
-    // 2. 後から macros を定義（上の behaviors を安全に参照可能）
-    macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
-        };
-
-        // 存在しない zmk,behavior-toggle-layer の代わりに 標準の &tog を使用
-        exit_AML: exit_AML {
-            compatible = "zmk,behavior-macro";
-            wait-ms = <0>;
-            tap-ms = <0>;
-            #binding-cells = <0>;
-            bindings = <&tog MOUSE>; 
-            label = "exit_AML";
-        };
-
-        kp_exit_AML: kp_exit_AML {
-            compatible = "zmk,behavior-macro-one-param";
-            wait-ms = <0>;
-            tap-ms = <0>;
-            #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
-            label = "KP_exit_AML";
-        };
-
-        mod_exit_AML: mod_exit_AML {
-            compatible = "zmk,behavior-macro-one-param";
-            wait-ms = <0>;
-            tap-ms = <0>;
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_tap>,
-                <&exit_AML>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-
-            label = "MOD_exit_AML";
-        };
-
-        mo_exit_AML: mo_exit_AML {
-            compatible = "zmk,behavior-macro-one-param";
-            wait-ms = <0>;
-            tap-ms = <0>;
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
-                <&macro_tap>,
-                <&exit_AML>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
-                <&macro_tap>;
-
-            label = "MO_exit_AML";
-        };
-
-        mkp_exit_AML: mkp_exit_AML {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
-                <&macro_tap>,
-                <&sl_250 MOUSE>;
-
-            label = "MKP_EXIT_AML";
-        };
-    };
     keymap {
         compatible = "zmk,keymap";
 
