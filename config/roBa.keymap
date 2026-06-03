@@ -97,7 +97,7 @@
 
         kakko2 {
             bindings = <&to_layer_0 JP_LPAREN>;
-            key-positions = <30> 31;
+            key-positions = <30 31>;
         };
 
         kakkotoji2 {
