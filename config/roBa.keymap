@@ -56,28 +56,53 @@
         compatible = "zmk,combos";
 
         tab {
-            bindings = <&kp TAB>;
+            bindings = <&to_layer_0 TAB>;
             key-positions = <11 12>;
         };
 
         shift_tab {
-            bindings = <&kp LS(TAB)>;
+            bindings = <&to_layer_0 LS(TAB)>;
             key-positions = <12 13>;
         };
 
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
         eq {
-            bindings = <&kp EQUAL>;
+            bindings = <&to_layer_0 EQUAL>;
             key-positions = <24 25>;
+        };
+
+        Esc {
+            bindings = <&to_layer_0 ESC>;
+            key-positions = <1 2>;
+        };
+
+        at {
+            bindings = <&to_layer_0 AT>;
+            key-positions = <7 8>;
+        };
+
+        nami {
+            bindings = <&to_layer_0 LANG5>;
+            key-positions = <6 7>;
+        };
+
+        kakko {
+            bindings = <&to_layer_0 LEFT_BRACKET>;
+            key-positions = <18 19>;
+        };
+
+        kakkotoji {
+            bindings = <&to_layer_0 RIGHT_BRACKET>;
+            key-positions = <19 20>;
+        };
+
+        kakko2 {
+            bindings = <&to_layer_0 RS(NUMBER_8)>;
+            key-positions = <30>;
+        };
+
+        kakkotoji2 {
+            bindings = <&to_layer_0 RS(NUMBER_9)>;
+            key-positions = <31 32>;
         };
     };
 
@@ -121,10 +146,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                 &kp T                                                   &kp Y        &kp U  &kp I      &kp O    &kp P
-&mt LEFT_ALT A    &kp S         &kp D         &kp F                 &kp G        &kp LS(LG(S))               &kp SEMICOLON  &kp H        &kp J  &lt 5 K    &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                 &kp B        &lt 2 TAB                   &kp JP_COLON   &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT LANG2  &lt 1 SPACE  &lt_to_layer_0 3 LANG1      &kp BACKSPACE  &lt 1 ENTER                             &kp ESC
+&kp Q             &kp W         &kp E         &kp R                 &kp T                                                 &kp Y        &kp U  &kp I      &kp O    &kp P
+&mt LEFT_ALT A    &kp S         &kp D         &kp F                 &kp G        &kp LS(LG(S))             &kp SEMICOLON  &kp H        &kp J  &lt 5 K    &kp L    &kp MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                 &kp B        &lt 2 LANG1               &kp JP_COLON   &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT LANG2  &lt 1 SPACE  &lt_to_layer_0 3 TAB      &kp BACKSPACE  &lt 1 ENTER                             &kp ESC
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
@@ -134,7 +159,7 @@
             bindings = <
 &kp ASTERISK  &kp N7        &kp N8        &kp N9        &kp EQUAL                          &kp HOME       &kp END         &kp JP_LBRACKET  &kp JP_RBRACKET  &kp JP_AT
 &kp SLASH     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS  &trans      &trans      &kp PAGE_UP    &mkp MB1        &kp UP_ARROW     &mkp MB2         &kp SEMICOLON
-&kp TILDE     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS   &trans      &trans      &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW   &kp RIGHT_ARROW  &mt RIGHT_SHIFT JP_COLON
+&kp LANG5     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS   &trans      &trans      &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW   &kp RIGHT_ARROW  &mt RIGHT_SHIFT JP_COLON
 &kp LCTRL     &kp N0        &kp DOT       &trans        &trans     &trans      &kp DELETE  &kp LS(ENTER)                                                    &trans
             >;
         };
@@ -161,21 +186,12 @@
             bindings = <
 &to_layer_0 Q      &to_layer_0 W         &to_layer_0 E         &to_layer_0 R      &to_layer_0 T                                                    &to_layer_0 Y      &to_layer_0 U      &to_layer_0 I      &to_layer_0 O      &to_layer_0 P
 &to_layer_0 A      &to_layer_0 S         &to_layer_0 D         &to_layer_0 F      &to_layer_0 G      &trans                 &to_layer_0 SEMICOLON  &to_layer_0 H      &mkp_exit_AML MB1  &lt 5 K            &mkp_exit_AML MB2  &to_layer_0 MINUS
-&to_layer_0 Z      &to_layer_0 X         &to_layer_0 C         &to_layer_0 V      &to_layer_0 B      &to_layer_0 B          &to_layer_0 COLON      &to_layer_0 N      &mkp_exit_AML MB4  &to_layer_0 COMMA  &mkp_exit_AML MB5  &to_layer_0 SLASH
-&to_layer_0 LCTRL  &to_layer_0 LEFT_WIN  &to_layer_0 LEFT_ALT  &to_layer_0 LANG2  &to_layer_0 SPACE  &to_layer_0 LANG1      &to_layer_0 BACKSPACE  &to_layer_0 ENTER                                                           &to_layer_0 ESC
+&to_layer_0 Z      &to_layer_0 X         &to_layer_0 C         &to_layer_0 V      &to_layer_0 B      &to_layer_0 LANG1      &to_layer_0 COLON      &to_layer_0 N      &mkp_exit_AML MB4  &to_layer_0 COMMA  &mkp_exit_AML MB5  &to_layer_0 SLASH
+&to_layer_0 LCTRL  &to_layer_0 LEFT_WIN  &to_layer_0 LEFT_ALT  &to_layer_0 LANG2  &to_layer_0 SPACE  &to_layer_0 TAB        &to_layer_0 BACKSPACE  &to_layer_0 ENTER                                                           &to_layer_0 ESC
             >;
         };
 
         SCROLL {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
-            >;
-        };
-
-        ARROW {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
