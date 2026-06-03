@@ -159,7 +159,7 @@
             bindings = <
 &kp ASTERISK  &kp N7        &kp N8        &kp N9        &kp EQUAL                          &kp HOME       &kp END         &kp JP_LBRACKET  &kp JP_RBRACKET  &kp JP_AT
 &kp SLASH     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS  &trans      &trans      &kp PAGE_UP    &mkp MB1        &kp UP_ARROW     &mkp MB2         &kp SEMICOLON
-&kp JP_TILDE     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS   &trans      &trans      &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW   &kp RIGHT_ARROW  &mt RIGHT_SHIFT JP_COLON
+&kp JP_TILDE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS   &trans      &trans      &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW   &kp RIGHT_ARROW  &mt RIGHT_SHIFT JP_COLON
 &kp LCTRL     &kp N0        &kp DOT       &trans        &trans     &trans      &kp DELETE  &kp LS(ENTER)                                                    &trans
             >;
         };
@@ -184,10 +184,10 @@
 
         MOUSE {
             bindings = <
-&to_layer_0 Q      &to_layer_0 W         &to_layer_0 E         &to_layer_0 R      &to_layer_0 T                                                    &to_layer_0 Y      &to_layer_0 U      &to_layer_0 I      &to_layer_0 O      &to_layer_0 P
-&to_layer_0 A      &to_layer_0 S         &to_layer_0 D         &to_layer_0 F      &to_layer_0 G      &trans                 &to_layer_0 SEMICOLON  &to_layer_0 H      &mkp_exit_AML MB1  &lt 5 K            &mkp_exit_AML MB2  &to_layer_0 MINUS
-&to_layer_0 Z      &to_layer_0 X         &to_layer_0 C         &to_layer_0 V      &to_layer_0 B      &to_layer_0 LANG1      &to_layer_0 COLON      &to_layer_0 N      &mkp_exit_AML MB4  &to_layer_0 COMMA  &mkp_exit_AML MB5  &to_layer_0 SLASH
-&to_layer_0 LCTRL  &to_layer_0 LEFT_WIN  &to_layer_0 LEFT_ALT  &to_layer_0 LANG2  &to_layer_0 SPACE  &to_layer_0 TAB        &to_layer_0 BACKSPACE  &to_layer_0 ENTER                                                           &to_layer_0 ESC
+&to_layer_0 Q      &to_layer_0 W         &to_layer_0 E         &to_layer_0 R      &to_layer_0 T                                                    &to_layer_0 Y      &to_layer_0 U      &to_layer_0 I      &to_layer_0 O       &to_layer_0 P
+&to_layer_0 A      &to_layer_0 S         &to_layer_0 D         &to_layer_0 F      &to_layer_0 G      &trans                 &to_layer_0 SEMICOLON  &to_layer_0 H      &mkp_exit_AML MB1  &lt 5 K            &mkp_exit_AML MB2   &to_layer_0 MINUS
+&to_layer_0 Z      &to_layer_0 X         &to_layer_0 C         &to_layer_0 V      &to_layer_0 B      &to_layer_0 LANG1      &to_layer_0 COLON      &to_layer_0 N      &to_layer_0 M      &to_layer_0 COMMA  &to_layer_0 PERIOD  &to_layer_0 SLASH
+&to_layer_0 LCTRL  &to_layer_0 LEFT_WIN  &to_layer_0 LEFT_ALT  &to_layer_0 LANG2  &to_layer_0 SPACE  &to_layer_0 TAB        &to_layer_0 BACKSPACE  &to_layer_0 ENTER                                                            &to_layer_0 ESC
             >;
         };
 
