@@ -56,52 +56,52 @@
         compatible = "zmk,combos";
 
         tab {
-            bindings = <&to_layer_0 TAB>;
+            bindings = <&kp TAB>;
             key-positions = <11 12>;
         };
 
         shift_tab {
-            bindings = <&to_layer_0 LS(TAB)>;
+            bindings = <&kp LS(TAB)>;
             key-positions = <12 13>;
         };
 
         eq {
-            bindings = <&to_layer_0 EQUAL>;
+            bindings = <&kp EQUAL>;
             key-positions = <24 25>;
         };
 
         Esc {
-            bindings = <&to_layer_0 ESC>;
+            bindings = <&kp ESC>;
             key-positions = <1 2>;
         };
 
         at {
-            bindings = <&to_layer_0 AT>;
+            bindings = <&kp AT>;
             key-positions = <7 8>;
         };
 
         nami {
-            bindings = <&to_layer_0 JP_TILDE>;
+            bindings = <&kp JP_TILDE>;
             key-positions = <6 7>;
         };
 
-        kakko {
-            bindings = <&to_layer_0 JP_LBRACKET>;
+        mb1 {
+            bindings = <&kp MB1>;
             key-positions = <18 19>;
         };
 
-        kakkotoji {
-            bindings = <&to_layer_0 JP_RBRACKET>;
+        mb2 {
+            bindings = <&kp MB2>;
             key-positions = <19 20>;
         };
 
-        kakko2 {
-            bindings = <&to_layer_0 JP_LPAREN>;
+        mb4 {
+            bindings = <&kp MB4>;
             key-positions = <30 31>;
         };
 
-        kakkotoji2 {
-            bindings = <&to_layer_0 JP_RPAREN>;
+        mb5 {
+            bindings = <&kp MB5>;
             key-positions = <31 32>;
         };
     };
